@@ -23,7 +23,7 @@ This is a Flask web application that predicts employee attrition based on severa
 
    ```bash
    git clone https://github.com/krishnakamalbaishnab/Predict-Employee-Attrition-Using-this-Web-App.git
-   cd your-repo-name
+   
    
    ```
 
