@@ -22,8 +22,9 @@ This is a Flask web application that predicts employee attrition based on severa
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/krishnakamalbaishnab/Predict-Employee-Attrition-Using-this-Web-App.git
    cd your-repo-name
+   
    ```
 
 2. Create a virtual environment (optional but recommended):
