@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Attrition Prediction</title>
+    <style>
+      body {
+        background-color: #e0f7fa;
+        font-family: "Arial", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .form-container {
+        background-color: #ffffff;
+        padding: 30px;
+        max-width: 500px;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      h2 {
+        text-align: center;
+        color: #00796b;
+        margin-top: 0;
+        font-size: 28px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        font-size: 16px;
+        color: #00796b;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #00796b;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #004d40;
+        background-color: #e0f2f1;
+      }
+
+      .form-control:focus {
+        border-color: #004d40;
+        outline: none;
+      }
+
+      .btn {
+        width: 100%;
+        background-color: #00796b;
+        color: white;
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #004d40;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Enter Features for Prediction</h2>
+      <form action="/predict" method="post">
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="text" id="age" name="age" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="monthly_income">Monthly Income:</label>
+          <input
+            type="text"
+            id="monthly_income"
+            name="monthly_income"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="years_at_company">Years at Company:</label>
+          <input
+            type="text"
+            id="years_at_company"
+            name="years_at_company"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="job_satisfaction">Job Satisfaction (1-4):</label>
+          <input
+            type="text"
+            id="job_satisfaction"
+            name="job_satisfaction"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="work_life_balance">Work-Life Balance (1-4):</label>
+          <input
+            type="text"
+            id="work_life_balance"
+            name="work_life_balance"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="overtime">OverTime (0 = No, 1 = Yes):</label>
+          <input
+            type="text"
+            id="overtime"
+            name="overtime"
+            class="form-control"
+          />
+        </div>
+
+        <input type="submit" value="Predict" class="btn" />
+      </form>
+      <h3>{{ prediction_text }}</h3>
+    </div>
+  </body>
+</html>
